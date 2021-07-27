@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { HomepageRoutingModule } from './homepage-routing.module';
 import { HomepageComponent } from './homepage.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { HomepageComponent } from './homepage.component';
   ],
   imports: [
     CommonModule,
-    HomepageRoutingModule
+    HomepageRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class HomepageModule { }
