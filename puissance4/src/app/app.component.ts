@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Select } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { ThemeState } from './store/theme/theme.state';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'puissance4';
+  @Select(ThemeState.getTheme) isDarkTheme!: Observable<boolean>;
 }

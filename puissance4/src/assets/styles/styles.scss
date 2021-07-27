@@ -1,0 +1,13 @@
+@import './themes.scss';
+@import './padding&margin.scss';
+@import './fonts.scss';
+
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
