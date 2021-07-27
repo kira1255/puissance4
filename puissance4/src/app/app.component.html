@@ -1,10 +1,10 @@
-<!-- Header -->
-<mat-toolbar></mat-toolbar>
+<div class="app mat-app-background" [ngClass]="{'dark-theme': isDarkTheme | async}">
+  <!-- Header -->
+  <app-header></app-header>
 
-<!-- Main Router -->
-<div class="main-container">
-  <router-outlet></router-outlet>
+  <!-- Main Router -->
+  <div class="app__container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
-<!-- Footer -->
-<mat-toolbar></mat-toolbar>

@@ -1,0 +1,11 @@
+<mat-toolbar class="header">
+    <h1 class="header__title mat-primary">Puissance 4</h1>
+
+    <div class="spacer"></div>
+
+    <mat-icon [color]="(dark | async) ? '' : 'primary'" class="m-r-10">brightness_5</mat-icon>
+    <mat-slide-toggle
+    (change)='toogleTheme()'>
+    </mat-slide-toggle>
+    <mat-icon [color]="(dark | async) ? 'primary' : ''" class="m-l-10">dark_mode</mat-icon>
+</mat-toolbar>
