@@ -1,0 +1,34 @@
+.game{
+    max-width: 40%;
+    margin: auto;
+
+    &__grid-container{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        border: 12px solid #2867b2;
+        border-radius: 23px;
+    }
+}
+
+.game--fullscreen{
+    max-width: 90%;
+    margin: auto;
+}
+
+.game--almost-fullscreen{
+    max-width: 80%;
+    margin: auto;
+}
+
+.game__players--player-two{
+    text-align: right;
+}
+
+.game__action{
+    text-align: center;
+}
+
+.game__actions{
+    margin: 20px 0px;
+}
