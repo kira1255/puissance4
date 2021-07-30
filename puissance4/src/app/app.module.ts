@@ -9,8 +9,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './layout/header/header.component';
 import { NgxsModule } from '@ngxs/store';
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { ngxsConfig } from './ngxs.config';
 import { ThemeState } from './store/theme/theme.state';
+import { GameState } from './store/game/game.state';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,12 @@ import { ThemeState } from './store/theme/theme.state';
     HeaderComponent
   ],
   imports: [
+    NgxsModule.forRoot([ThemeState, GameState], ngxsConfig),
+    NgxsStoragePluginModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgxsModule.forRoot([ThemeState], ngxsConfig),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

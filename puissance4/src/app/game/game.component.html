@@ -1,1 +1,24 @@
-<p>game works!</p>
+<div class="game" ngClass.lt-sm="game--fullscreen" ngClass.lt-md="game--almost-fullscreen">
+    <!-- <h1 class="game__turn-indicator">{{ (game | async)!.turn!.name }}</h1> -->
+    <div class="game__grid-container">
+        <ng-container  *ngFor="let caseY of gridY; let y = index;">
+            <ng-container  *ngFor="let caseX of gridX; let x = index;">
+                <app-case (click)="playPawn(x)" [pawn]="displayPawn(x, (gridY.length - 1) - y)"></app-case>
+            </ng-container >
+        </ng-container >
+    </div>
+    <div class="game__actions" fxLayout="row" fxFlexFill>
+        <div fxFlex="30"></div>
+        <div fxFlex="20" class="game__action">
+            <button [disabled]="(game | async)!.pawns!.length == 0" mat-fab class="game__action--back" (click)="cancelLastMove()">
+                <mat-icon>undo</mat-icon>
+            </button>
+        </div>
+        <div fxFlex="20" class="game__action">
+            <button [disabled]="(game | async)!.pawns!.length == 0" mat-fab class="game__action--reset" (click)="resetGame()">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </div>
+        <div fxFlex="30"></div>
+    </div>
+</div>

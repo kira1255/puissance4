@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { ToogleTheme } from './theme.actions';
 
@@ -11,6 +12,7 @@ export class ThemeStateModel {
         dark: false
     }
 })
+@Injectable()
 export class ThemeState {
 
     @Selector()
