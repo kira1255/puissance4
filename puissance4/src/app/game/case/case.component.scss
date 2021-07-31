@@ -1,6 +1,13 @@
+:host{
+    position: relative;
+}
+
 .case{
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 100;
+    opacity: 1;
     background: url("/assets/img/empty-case.png");
     background-size: contain;
     outline: 1px solid #2867b2;

@@ -52,3 +52,31 @@
     margin: 20px 0px;
     padding-bottom: 30px;
 }
+
+.case__animated{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    z-index: 50;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 1;
+    transition: top .15s;
+    display: none;
+
+    &.show{
+        display: block;
+    }
+
+    &--red{
+        background: #f4433b;
+        box-shadow: inset 10px 10px 10px #72211d, inset -10px -10px 10px #72211d;
+    }
+
+    &--yellow{
+        background: #f4e43b;
+        box-shadow: inset 10px 10px 10px #6b641a, inset -10px -10px 10px #6b641a;
+    }
+}
