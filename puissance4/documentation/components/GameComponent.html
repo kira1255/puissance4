@@ -1,0 +1,1398 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>puissance4 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">puissance4 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  GameComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/game/game.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Game component</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-game</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./game.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./game.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#game" >game</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#gridX" >gridX</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#gridY" >gridY</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#animateFallingPawn" >animateFallingPawn</a>
+                            </li>
+                            <li>
+                                <a href="#cancelLastMove" >cancelLastMove</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#checkVictory" >checkVictory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayPawn" >displayPawn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getYPositionInColumn" >getYPositionInColumn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initGame" >initGame</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openEndGameDialog" >openEndGameDialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#playPawn" >playPawn</a>
+                            </li>
+                            <li>
+                                <a href="#resetGame" >resetGame</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="animateFallingPawn"></a>
+                    <span class="name">
+                        <span ><b>animateFallingPawn</b></span>
+                        <a href="#animateFallingPawn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>animateFallingPawn(column: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, row: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, player: <a href="../interfaces/Player.html" target="_self">Player</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">src/app/game/game.component.ts:190</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Animate a falling pawn in the column played, falling up to the row where the pawn will fall</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>column</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>column played</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>row</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>row where the animation ends</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>player</td>
+                                    <td>
+                                                <code><a href="../interfaces/Player.html" target="_self" >Player</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>player that played to determine the color of the pawn to animate</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelLastMove"></a>
+                    <span class="name">
+                        <span ><b>cancelLastMove</b></span>
+                        <a href="#cancelLastMove"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelLastMove()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/game/game.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dispatch CancelLastMove Action from the store, remove last pawn played and sets turn to the last player</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkVictory"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>checkVictory</b></span>
+                        <a href="#checkVictory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkVictory(playedPawn: <a href="../interfaces/Pawn.html" target="_self">Pawn</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/game/game.component.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dispatch CheckWinner Action from the store, checks if played pawn causes a victory</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>playedPawn</td>
+                                    <td>
+                                                <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>pawn that was just played</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayPawn"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>displayPawn</b></span>
+                        <a href="#displayPawn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>displayPawn(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, y: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/game/game.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get a Pawn if present on given coordinates</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>x</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>column in wich the pawns will be put</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>y</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>row in wich the pawns will be put</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getYPositionInColumn"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getYPositionInColumn</b></span>
+                        <a href="#getYPositionInColumn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getYPositionInColumn(column: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/app/game/game.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the number of pawns in a column to set the vertical position of the next pawn that will be played in that column</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>column</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>column in wich the pawns will be put</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initGame"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>initGame</b></span>
+                        <a href="#initGame"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initGame()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/game/game.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get rows and columns to set from the store</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openEndGameDialog"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>openEndGameDialog</b></span>
+                        <a href="#openEndGameDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openEndGameDialog(winner?: <a href="../interfaces/Player.html" target="_self">Player</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">src/app/game/game.component.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Shows the end game dialog</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>winner</td>
+                                    <td>
+                                                <code><a href="../interfaces/Player.html" target="_self" >Player</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>player that played that last pawn and won</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="playPawn"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>playPawn</b></span>
+                        <a href="#playPawn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>playPawn(column: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/game/game.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Play a pawn if the column played isn&#39;t full (shows a snackbar if so), end games if the grid is full or if the player won</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>column</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>column in wich the pawns will be put</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetGame"></a>
+                    <span class="name">
+                        <span ><b>resetGame</b></span>
+                        <a href="#resetGame"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetGame()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/game/game.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Dispatch GameReset Action from the store, fresh start (removes all the pawns and set turn to player one)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="game"></a>
+                    <span class="name">
+                        <span ><b>game</b></span>
+                        <a href="#game"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Game.html" target="_self" >Observable&lt;Game&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Select(GameState.getGame)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/game/game.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Game State from the store</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gridX"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>gridX</b></span>
+                        <a href="#gridX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Pawn.html" target="_self" >Array&lt;Pawn&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/game/game.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Number of columns, doesn&#39;t get any actual pawn in it</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gridY"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>gridY</b></span>
+                        <a href="#gridY"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Pawn.html" target="_self" >Array&lt;Pawn&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/game/game.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Number of rows, doesn&#39;t get any actual pawn in it</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Select, Store } from &#x27;@ngxs/store&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { take } from &#x27;rxjs/operators&#x27;;
+import { Game } from &#x27;../models/game&#x27;;
+import { Pawn } from &#x27;../models/pawn&#x27;;
+import { CheckWinner, GameReset, PlayPawn, CancelLastMove } from &#x27;../store/game/game.actions&#x27;;
+import { GameState } from &#x27;../store/game/game.state&#x27;;
+import { EndGameComponent } from &#x27;./dialogs/end-game/end-game.component&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { Player } from &#x27;../models/player&#x27;;
+
+/**
+ * Game component
+ */
+@Component({
+  selector: &#x27;app-game&#x27;,
+  templateUrl: &#x27;./game.component.html&#x27;,
+  styleUrls: [&#x27;./game.component.scss&#x27;]
+})
+export class GameComponent implements OnInit {
+
+  /**
+   * Game State from the store
+   * @type {Observable&lt;Game&gt;}
+   */
+  @Select(GameState.getGame) game!: Observable&lt;Game&gt;;
+
+  /**
+   * Number of columns, doesn&#x27;t get any actual pawn in it
+   * @type {Array&lt;Pawn&gt;}
+   */
+  public gridX: Array&lt;Pawn&gt; &#x3D; [];
+
+  /**
+   * Number of rows, doesn&#x27;t get any actual pawn in it
+   * @type {Array&lt;Pawn&gt;}
+   */
+  public gridY: Array&lt;Pawn&gt; &#x3D; [];
+
+  /**
+   * @ignore
+   */
+  constructor(
+    private store: Store,
+    private _snack: MatSnackBar,
+    private dialog: MatDialog,
+    private router: Router
+    ) { }
+
+    /**
+   * @ignore
+   */
+  ngOnInit(): void {
+    this.initGame();
+  }
+
+  /**
+   * Get rows and columns to set from the store
+   */
+  private initGame(){
+    this.game.pipe(take(1)).subscribe(g &#x3D;&gt; {
+      this.gridX &#x3D; Array(g!.columns);
+      this.gridY &#x3D; Array(g!.rows);
+    });
+  }
+
+  /**
+   * Dispatch GameReset Action from the store, fresh start (removes all the pawns and set turn to player one)
+   */
+  resetGame(){
+    this.store.dispatch(new GameReset());
+  }
+
+  /**
+   * Dispatch CancelLastMove Action from the store, remove last pawn played and sets turn to the last player
+   */
+  cancelLastMove(){
+    this.store.dispatch(new CancelLastMove());
+  }
+
+  /**
+   * Play a pawn if the column played isn&#x27;t full (shows a snackbar if so), end games if the grid is full or if the player won
+   * @param {number} column column in wich the pawns will be put
+   */
+  public playPawn(column: number){
+    this.game.pipe(take(1)).subscribe(g &#x3D;&gt; {
+      const playedPawn: Pawn &#x3D; {
+        x: column,
+        y: this.getYPositionInColumn(column),
+        player: g.turn!
+      }
+      this.store.dispatch(new PlayPawn( playedPawn )).subscribe(
+        (store) &#x3D;&gt; {
+          this.animateFallingPawn(playedPawn.x, playedPawn.y, g.turn!);
+          this.checkVictory(playedPawn);
+
+          // Vérif : Si la grille est pleine, on termine le jeu sur un match nul
+          if(store.game.game.pawns?.length &#x3D;&#x3D;&#x3D; store.game.game.rows * store.game.game.columns){
+            this.openEndGameDialog(store.game.game.winner);
+          }
+        },
+        error &#x3D;&gt; {
+          this._snack.open(error.message, &quot;OK&quot;);
+        }
+      );
+    })
+  }
+
+  /**
+   * Get the number of pawns in a column to set the vertical position of the next pawn that will be played in that column
+   * @param {number} column column in wich the pawns will be put
+   * @return {number}
+   */
+  private getYPositionInColumn(column: number): number{
+    let pawnsInColumn: number &#x3D; 0;
+    this.game.pipe(take(1)).subscribe(g &#x3D;&gt; {
+      // On récupère le nombre de pions dans la colonne passée en param
+      pawnsInColumn &#x3D; g.pawns.filter(p &#x3D;&gt; p.x &#x3D;&#x3D;&#x3D; column).length;
+    });
+    // on retourne la position en Y à occuper par le pion
+    return pawnsInColumn;
+  }
+
+  /**
+   * Get a Pawn if present on given coordinates
+   * @param {number} x column in wich the pawns will be put
+   * @param {number} y row in wich the pawns will be put
+   * @return {Pawn}
+   */
+  public displayPawn(x: number, y: number): Pawn{
+    let pawnToDisplay!: Pawn;
+    
+    this.game.pipe(take(1)).subscribe(g &#x3D;&gt; {
+      // On check dans la liste de pions du store si on en a un aux coordonnées de la case passée en paramètres
+      g.pawns.map(p &#x3D;&gt; {
+        if (p.x &#x3D;&#x3D;&#x3D; x &amp;&amp; p.y &#x3D;&#x3D;&#x3D; y) {
+          pawnToDisplay &#x3D; p;
+        }
+      });
+    });
+    return pawnToDisplay;
+  }
+
+  /**
+   * Dispatch CheckWinner Action from the store, checks if played pawn causes a victory
+   * @param {Pawn} playedPawn pawn that was just played
+   */
+  private checkVictory(playedPawn: Pawn){
+    this.store.dispatch(new CheckWinner(playedPawn)).subscribe(store &#x3D;&gt; {
+      if(store.game.game.winner){
+        this.openEndGameDialog(store.game.game.winner);
+      }
+    });
+  }
+
+  /**
+   * Shows the end game dialog
+   * @param {Player} winner player that played that last pawn and won
+   */
+  public openEndGameDialog(winner?: Player) {
+    const dialogRef &#x3D; this.dialog.open(EndGameComponent, {
+      data: winner,
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      switch (result) {
+        case &#x27;quit&#x27;:
+          this.router.navigate([&#x27;home&#x27;]);
+          break;
+        case &#x27;replay&#x27;:
+          this.resetGame()
+          break;
+      
+        default:
+          break;
+      }
+    });
+  }
+
+  /**
+   * Animate a falling pawn in the column played, falling up to the row where the pawn will fall
+   * @param {number} column column played
+   * @param {number} row row where the animation ends
+   * @param {Player} player player that played to determine the color of the pawn to animate
+   */
+  animateFallingPawn(column: number, row: number, player: Player){
+    const pawnColor &#x3D; player.id &#x3D;&#x3D;&#x3D; 0 ? &quot;red&quot; : &quot;yellow&quot;;
+    let pawnToAnimate: HTMLElement &#x3D; document.getElementsByClassName(&#x60;falling-${pawnColor}-${column}&#x60;)[0] as HTMLElement;
+    pawnToAnimate.classList.add(&quot;show&quot;);
+    setTimeout(() &#x3D;&gt; {
+      pawnToAnimate.style.top &#x3D; &#x60;${((this.gridY.length - 1 - row) * 100)}%&#x60;;
+    }, 10);
+    setTimeout(() &#x3D;&gt; {
+      pawnToAnimate.classList.remove(&quot;show&quot;);
+      pawnToAnimate.style.top &#x3D; &quot;0%&quot;;
+    }, 140);
+    
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;game&quot; ngClass.lt-sm&#x3D;&quot;game--fullscreen&quot; ngClass.lt-md&#x3D;&quot;game--almost-fullscreen&quot;&gt;
+    &lt;!-- &lt;h1 class&#x3D;&quot;game__turn-indicator&quot;&gt;{{ (game | async)!.turn!.name }}&lt;/h1&gt; --&gt;
+    &lt;div class&#x3D;&quot;game__grid-container&quot; [ngClass]&#x3D;&quot;&#x27;game__grid-container--&#x27; + (game | async)!.columns&quot;&gt;
+        &lt;ng-container  *ngFor&#x3D;&quot;let caseY of gridY; let y &#x3D; index;&quot;&gt;
+            &lt;ng-container  *ngFor&#x3D;&quot;let caseX of gridX; let x &#x3D; index;&quot;&gt;
+                &lt;app-case (click)&#x3D;&quot;playPawn(x)&quot; [pawn]&#x3D;&quot;displayPawn(x, (gridY.length - 1) - y)&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;y &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;case__animated case__animated--red&quot; [ngClass]&#x3D;&quot;&#x27;falling-red-&#x27; + x&quot;&gt;&lt;/div&gt;
+                    &lt;div *ngIf&#x3D;&quot;y &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;case__animated case__animated--yellow&quot; [ngClass]&#x3D;&quot;&#x27;falling-yellow-&#x27; + x&quot;&gt;&lt;/div&gt;
+                &lt;/app-case&gt;
+            &lt;/ng-container &gt;
+        &lt;/ng-container &gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;game__actions&quot; fxLayout&#x3D;&quot;row&quot; fxFlexFill&gt;
+        &lt;div fxFlex&#x3D;&quot;30&quot;&gt;&lt;/div&gt;
+        &lt;div fxFlex&#x3D;&quot;20&quot; class&#x3D;&quot;game__action&quot;&gt;
+            &lt;button [disabled]&#x3D;&quot;(game | async)!.pawns!.length &#x3D;&#x3D; 0&quot; mat-fab class&#x3D;&quot;game__action--back&quot; (click)&#x3D;&quot;cancelLastMove()&quot;&gt;
+                &lt;mat-icon&gt;undo&lt;/mat-icon&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div fxFlex&#x3D;&quot;20&quot; class&#x3D;&quot;game__action&quot;&gt;
+            &lt;button [disabled]&#x3D;&quot;(game | async)!.pawns!.length &#x3D;&#x3D; 0&quot; mat-fab class&#x3D;&quot;game__action--reset&quot; (click)&#x3D;&quot;resetGame()&quot;&gt;
+                &lt;mat-icon&gt;sync&lt;/mat-icon&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div fxFlex&#x3D;&quot;30&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./game.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.game{
+    max-width: 88vh;
+    margin: auto;
+
+    &amp;__grid-container{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        border: 12px solid #2867b2;
+        border-radius: 23px;
+
+        &amp;--5{
+            grid-template-columns: repeat(5, 1fr);
+        }
+        &amp;--7{
+            grid-template-columns: repeat(7, 1fr);
+        }
+        &amp;--9{
+            grid-template-columns: repeat(9, 1fr);
+        }
+        &amp;--11{
+            grid-template-columns: repeat(11, 1fr);
+        }
+        &amp;--13{
+            grid-template-columns: repeat(13, 1fr);
+        }
+        &amp;--15{
+            grid-template-columns: repeat(15, 1fr);
+        }
+    }
+}
+
+.game--fullscreen{
+    max-width: 100%;
+    margin: auto;
+}
+
+.game--almost-fullscreen{
+    max-width: 88vh;
+    margin: auto;
+}
+
+.game__players--player-two{
+    text-align: right;
+}
+
+.game__action{
+    text-align: center;
+}
+
+.game__actions{
+    margin: 20px 0px;
+    padding-bottom: 30px;
+}
+
+.case__animated{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    z-index: 50;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 1;
+    transition: top .15s;
+    display: none;
+
+    &amp;.show{
+        display: block;
+    }
+
+    &amp;--red{
+        background: #f4433b;
+        box-shadow: inset 10px 10px 10px #72211d, inset -10px -10px 10px #72211d;
+    }
+
+    &amp;--yellow{
+        background: #f4e43b;
+        box-shadow: inset 10px 10px 10px #6b641a, inset -10px -10px 10px #6b641a;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="game" ngClass.lt-sm="game--fullscreen" ngClass.lt-md="game--almost-fullscreen">    <!-- <h1 class="game__turn-indicator">{{ (game | async)!.turn!.name }}</h1> -->    <div class="game__grid-container" [ngClass]="\'game__grid-container--\' + (game | async)!.columns">        <ng-container  *ngFor="let caseY of gridY; let y = index;">            <ng-container  *ngFor="let caseX of gridX; let x = index;">                <app-case (click)="playPawn(x)" [pawn]="displayPawn(x, (gridY.length - 1) - y)">                    <div *ngIf="y === 0" class="case__animated case__animated--red" [ngClass]="\'falling-red-\' + x"></div>                    <div *ngIf="y === 0" class="case__animated case__animated--yellow" [ngClass]="\'falling-yellow-\' + x"></div>                </app-case>            </ng-container >        </ng-container >    </div>    <div class="game__actions" fxLayout="row" fxFlexFill>        <div fxFlex="30"></div>        <div fxFlex="20" class="game__action">            <button [disabled]="(game | async)!.pawns!.length == 0" mat-fab class="game__action--back" (click)="cancelLastMove()">                <mat-icon>undo</mat-icon>            </button>        </div>        <div fxFlex="20" class="game__action">            <button [disabled]="(game | async)!.pawns!.length == 0" mat-fab class="game__action--reset" (click)="resetGame()">                <mat-icon>sync</mat-icon>            </button>        </div>        <div fxFlex="30"></div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CaseComponent', 'selector': 'app-case'},{'name': 'EndGameComponent', 'selector': 'app-end-game'},{'name': 'GameComponent', 'selector': 'app-game'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'GameComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GameComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

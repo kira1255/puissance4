@@ -1,0 +1,678 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>puissance4 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">puissance4 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >VictoryCheckService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/store/services/victory-check.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Provide methods to check if 4 pawns are aligned</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#diagonalLeftCheck" >diagonalLeftCheck</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#diagonalRightCheck" >diagonalRightCheck</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#horizontalCheck" >horizontalCheck</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#verticalCheck" >verticalCheck</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="diagonalLeftCheck"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>diagonalLeftCheck</b></span>
+                        <a href="#diagonalLeftCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>diagonalLeftCheck(game: <a href="../interfaces/Game.html" target="_self">Game</a>, pawnPlayed: <a href="../interfaces/Pawn.html" target="_self">Pawn</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/store/services/victory-check.service.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if 4 pawns are aligned diagonally in the last cell played, from bottom left to up right</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>game</td>
+                                    <td>
+                                                <code><a href="../interfaces/Game.html" target="_self" >Game</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pawnPlayed</td>
+                                    <td>
+                                                <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="diagonalRightCheck"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>diagonalRightCheck</b></span>
+                        <a href="#diagonalRightCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>diagonalRightCheck(game: <a href="../interfaces/Game.html" target="_self">Game</a>, pawnPlayed: <a href="../interfaces/Pawn.html" target="_self">Pawn</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/store/services/victory-check.service.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if 4 pawns are aligned diagonally in the last cell played, from bottom right to up left</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>game</td>
+                                    <td>
+                                                <code><a href="../interfaces/Game.html" target="_self" >Game</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pawnPlayed</td>
+                                    <td>
+                                                <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="horizontalCheck"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>horizontalCheck</b></span>
+                        <a href="#horizontalCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>horizontalCheck(game: <a href="../interfaces/Game.html" target="_self">Game</a>, rowPlayed: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pawnPlayed: <a href="../interfaces/Pawn.html" target="_self">Pawn</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/store/services/victory-check.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if 4 pawns are aligned horizontally in the last row played</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>game</td>
+                                    <td>
+                                                <code><a href="../interfaces/Game.html" target="_self" >Game</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>rowPlayed</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pawnPlayed</td>
+                                    <td>
+                                                <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="verticalCheck"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>verticalCheck</b></span>
+                        <a href="#verticalCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>verticalCheck(game: <a href="../interfaces/Game.html" target="_self">Game</a>, columnPlayed: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, pawnPlayed: <a href="../interfaces/Pawn.html" target="_self">Pawn</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/store/services/victory-check.service.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if 4 pawns are aligned vertically in the last column played</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>game</td>
+                                    <td>
+                                                <code><a href="../interfaces/Game.html" target="_self" >Game</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>columnPlayed</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pawnPlayed</td>
+                                    <td>
+                                                <code><a href="../interfaces/Pawn.html" target="_self" >Pawn</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Game } from &#x27;src/app/models/game&#x27;;
+import { Pawn } from &#x27;src/app/models/pawn&#x27;;
+
+/**
+ * Provide methods to check if 4 pawns are aligned
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class VictoryCheckService {
+
+  /**
+   * Check if 4 pawns are aligned vertically in the last column played
+   */
+  public verticalCheck(game: Game, columnPlayed: number, pawnPlayed: Pawn): boolean{
+
+    let won: boolean &#x3D; false;
+
+    // On récupère les pions de la colonne jouée qui appartiennent au joueur
+    let playerColumn &#x3D; game.pawns.filter(p &#x3D;&gt; (p.x &#x3D;&#x3D;&#x3D; columnPlayed &amp;&amp; p.player.id &#x3D;&#x3D;&#x3D; pawnPlayed.player.id));
+    // On ordonne le tableau
+    playerColumn &#x3D; playerColumn.sort((a,b) &#x3D;&gt; (a.y - b.y));
+    // On check si on a 4 pions alignés
+    let alignedPawns: number &#x3D; 1;
+    playerColumn.map((pawn, index, pawnList) &#x3D;&gt; {
+        if(pawn.y &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.y + 1 ) {
+            alignedPawns++;
+        }
+        else alignedPawns &#x3D; 1;
+
+        if(alignedPawns &gt; 3) {
+          console.info(pawnPlayed.player.name + &quot; a aligné 4 pions verticalement! 🎉&quot;)
+          won &#x3D; true;
+        }
+    });
+
+    return won;
+  }
+
+  /**
+   * Check if 4 pawns are aligned horizontally in the last row played
+   */
+  public horizontalCheck(game: Game, rowPlayed: number, pawnPlayed: Pawn): boolean{
+
+    let won: boolean &#x3D; false;
+
+    // On récupère les pions de la ligne jouée qui appartiennent au joueur
+    let playerRow &#x3D; game.pawns.filter(p &#x3D;&gt; (p.y &#x3D;&#x3D;&#x3D; rowPlayed &amp;&amp; p.player.id &#x3D;&#x3D;&#x3D; pawnPlayed.player.id));
+    // On ordonne le tableau
+    playerRow &#x3D; playerRow.sort((a,b) &#x3D;&gt; (a.x - b.x));
+    // On check si on a 4 pions alignés
+    let alignedPawns: number &#x3D; 1;
+    playerRow.map((pawn, index, pawnList) &#x3D;&gt; {
+        if(pawn.x &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.x + 1 ) {
+            alignedPawns++;
+        }
+        else alignedPawns &#x3D; 1;
+
+        if(alignedPawns &gt; 3) {
+          console.info(pawnPlayed.player.name + &quot; a aligné 4 pions horizontalement! 🎉&quot;)
+          won &#x3D; true;
+        }
+    });
+
+    return won;
+  }
+
+  /**
+   * Check if 4 pawns are aligned diagonally in the last cell played, from bottom right to up left
+   */
+  public diagonalRightCheck(game: Game, pawnPlayed: Pawn): boolean{
+
+    let won: boolean &#x3D; false;
+
+    // On récupère tous les pions du joueur dans la diagonale droite 
+    let playerPawns &#x3D; game.pawns.filter(p &#x3D;&gt; (p.x + p.y &#x3D;&#x3D;&#x3D; pawnPlayed.x + pawnPlayed.y ) &amp;&amp; (p.player.id &#x3D;&#x3D;&#x3D; pawnPlayed.player.id));
+    
+    // On ordonne le tableau
+    playerPawns &#x3D; playerPawns.sort((a,b) &#x3D;&gt; (a.x - b.x));
+    // On check si on a 4 pions alignés
+    let alignedPawns: number &#x3D; 1;
+    playerPawns.map((pawn, index, pawnList) &#x3D;&gt; {
+        if((pawn.x &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.x + 1) &amp;&amp; (pawn.y &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.y - 1)) {
+            alignedPawns++;
+        }
+        else alignedPawns &#x3D; 1;
+
+        if(alignedPawns &gt; 3) {
+          console.info(pawnPlayed.player.name + &quot; a aligné 4 pions en diagonale! 🎉&quot;)
+          won &#x3D; true;
+        }
+    });
+
+    return won;
+  }
+
+  /**
+   * Check if 4 pawns are aligned diagonally in the last cell played, from bottom left to up right
+   */
+  public diagonalLeftCheck(game: Game, pawnPlayed: Pawn): boolean{
+
+    let won: boolean &#x3D; false;
+
+    // On récupère tous les pions du joueur dans la diagonale droite 
+    let playerPawns &#x3D; game.pawns.filter(p &#x3D;&gt; (p.x - p.y &#x3D;&#x3D;&#x3D; pawnPlayed.x - pawnPlayed.y ) &amp;&amp; (p.player.id &#x3D;&#x3D;&#x3D; pawnPlayed.player.id));
+    
+    // On ordonne le tableau
+    playerPawns &#x3D; playerPawns.sort((a,b) &#x3D;&gt; (a.x - b.x));
+    // On check si on a 4 pions alignés
+    let alignedPawns: number &#x3D; 1;
+    playerPawns.map((pawn, index, pawnList) &#x3D;&gt; {
+        if((pawn.x &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.x + 1) &amp;&amp; (pawn.y &#x3D;&#x3D;&#x3D; pawnList[index - 1]?.y + 1)) {
+            alignedPawns++;
+        }
+        else alignedPawns &#x3D; 1;
+
+        if(alignedPawns &gt; 3) {
+          console.info(pawnPlayed.player.name + &quot; a aligné 4 pions en diagonale! 🎉&quot;)
+          won &#x3D; true;
+        }
+    });
+
+    return won;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'VictoryCheckService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
