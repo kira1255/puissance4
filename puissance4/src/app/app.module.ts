@@ -13,11 +13,13 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { ngxsConfig } from './ngxs.config';
 import { ThemeState } from './store/theme/theme.state';
 import { GameState } from './store/game/game.state';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     NgxsModule.forRoot([ThemeState, GameState], ngxsConfig),
