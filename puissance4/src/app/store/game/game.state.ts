@@ -6,8 +6,13 @@ import { CheckWinner, GameInit, PlayPawn, GameReset, CancelLastMove, SetRows, Se
 import { VictoryCheckService } from '../services/victory-check.service';
 import { Player } from 'src/app/models/player';
 
-
+/**
+ * Game State Model
+ */
 export class GameStateModel {
+    /**
+     * Game state, contains the two players, the columns and rows number and an array of the pawns played
+     */
     game: Game = {
         player1: {id: 0, name: "Joueur 1"},
         player2: {id: 1, name: "Joueur 2"},
@@ -17,6 +22,9 @@ export class GameStateModel {
     };
 }
 
+/**
+ * Game State
+ */
 @State<GameStateModel>({
     name: 'game',
     defaults: {
@@ -32,23 +40,38 @@ export class GameStateModel {
 @Injectable()
 export class GameState {
 
+    /**
+     * Victory Service, has all the methods to check if 4 pawns are aligned
+     */
     private victoryService: VictoryCheckService = new VictoryCheckService();
 
+    /**
+     * Returns game state
+     */
     @Selector()
     static getGame(state: GameStateModel) {
         return state.game;
     }
 
+    /**
+     * Returns rows
+     */
     @Selector()
     static getRows(state: GameStateModel) {
         return state.game.rows;
     }
 
+    /**
+     * Returns columns
+     */
     @Selector()
     static getColumns(state: GameStateModel) {
         return state.game.columns;
     }
 
+    /**
+     * Initialize the game, set player turn to player one
+     */
     @Action(GameInit)
     initGame({getState, patchState }: StateContext<GameStateModel>, {payload}: GameInit) {
         const state = getState();
@@ -60,6 +83,9 @@ export class GameState {
         });
     }
 
+    /**
+     * Sets selected rows in the game state
+     */
     @Action(SetRows)
     setRows({getState, patchState }: StateContext<GameStateModel>, {rows}: SetRows) {
         const state = getState();
@@ -73,6 +99,9 @@ export class GameState {
         });
     }
 
+    /**
+     * Sets selected columns in the game state
+     */
     @Action(SetColumns)
     setColumns({getState, patchState }: StateContext<GameStateModel>, {columns}: SetColumns) {
         const state = getState();
@@ -86,6 +115,9 @@ export class GameState {
         });
     }
 
+    /**
+     * Reset the game, set player turn to red and reset the pawn array
+     */
     @Action(GameReset)
     resetGame({getState, patchState }: StateContext<GameStateModel>) {
         const state = getState();
@@ -98,10 +130,17 @@ export class GameState {
         });
     }
     
+    /**
+     * Removes last played pawn if there is at least one pawn in the game
+     */
     @Action(CancelLastMove)
     cancelLastMove({getState, patchState }: StateContext<GameStateModel>) {
         const state = getState();
         const truncatedPawns = state.game.pawns.slice(0,-1);
+        // check : there is at least one pawn 
+        if(state.game.pawns.length === 0){
+            throw new Error('🧐 Aucun pion en jeu !');
+        }
         patchState({
             ...state, game: {
                 ...state.game,
@@ -111,11 +150,14 @@ export class GameState {
         });
     }
 
+    /**
+     * Add a pawn to the state pawn array if column played isn't full
+     */
     @Action(PlayPawn)
     playPawn({getState, patchState }: StateContext<GameStateModel>, {pawn}: PlayPawn) {
         const state = getState();
         const pawnsList = [...state.game.pawns, pawn]
-        // Vérif : la colonne est déjà remplie
+        // check : column is full already
         if(pawn.y >= state.game.rows){
             throw new Error('🧐 La colonne est pleine !');
         }
@@ -128,6 +170,9 @@ export class GameState {
         });
     }
 
+    /**
+     * Uses Victory service to check if 4 pawns are aligned, update state if there's a winner
+     */
     @Action(CheckWinner)
     checkWinner({getState, patchState }: StateContext<GameStateModel>, {pawnPlayed}: CheckWinner) {
         const state = getState();

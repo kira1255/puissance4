@@ -2,14 +2,17 @@ import { Injectable } from '@angular/core';
 import { Game } from 'src/app/models/game';
 import { Pawn } from 'src/app/models/pawn';
 
+/**
+ * Provide methods to check if 4 pawns are aligned
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class VictoryCheckService {
 
-  constructor() { }
-
-  // au moins 4 pions en vertical
+  /**
+   * Check if 4 pawns are aligned vertically in the last column played
+   */
   public verticalCheck(game: Game, columnPlayed: number, pawnPlayed: Pawn): boolean{
 
     let won: boolean = false;
@@ -35,7 +38,9 @@ export class VictoryCheckService {
     return won;
   }
 
-  // au moins 4 pions en horizontal
+  /**
+   * Check if 4 pawns are aligned horizontally in the last row played
+   */
   public horizontalCheck(game: Game, rowPlayed: number, pawnPlayed: Pawn): boolean{
 
     let won: boolean = false;
@@ -61,7 +66,9 @@ export class VictoryCheckService {
     return won;
   }
 
-  // 4 pions en diagonale droite
+  /**
+   * Check if 4 pawns are aligned diagonally in the last cell played, from bottom right to up left
+   */
   public diagonalRightCheck(game: Game, pawnPlayed: Pawn): boolean{
 
     let won: boolean = false;
@@ -88,7 +95,9 @@ export class VictoryCheckService {
     return won;
   }
 
-  // 4 pions en diagonale gauche
+  /**
+   * Check if 4 pawns are aligned diagonally in the last cell played, from bottom left to up right
+   */
   public diagonalLeftCheck(game: Game, pawnPlayed: Pawn): boolean{
 
     let won: boolean = false;

@@ -12,6 +12,9 @@ import { EndGameComponent } from './dialogs/end-game/end-game.component';
 import { Router } from '@angular/router';
 import { Player } from '../models/player';
 
+/**
+ * Game component
+ */
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -19,11 +22,27 @@ import { Player } from '../models/player';
 })
 export class GameComponent implements OnInit {
 
+  /**
+   * Game State from the store
+   * @type {Observable<Game>}
+   */
   @Select(GameState.getGame) game!: Observable<Game>;
 
+  /**
+   * Number of columns, doesn't get any actual pawn in it
+   * @type {Array<Pawn>}
+   */
   public gridX: Array<Pawn> = [];
+
+  /**
+   * Number of rows, doesn't get any actual pawn in it
+   * @type {Array<Pawn>}
+   */
   public gridY: Array<Pawn> = [];
 
+  /**
+   * @ignore
+   */
   constructor(
     private store: Store,
     private _snack: MatSnackBar,
@@ -31,10 +50,16 @@ export class GameComponent implements OnInit {
     private router: Router
     ) { }
 
+    /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.initGame();
   }
 
+  /**
+   * Get rows and columns to set from the store
+   */
   private initGame(){
     this.game.pipe(take(1)).subscribe(g => {
       this.gridX = Array(g!.columns);
@@ -42,14 +67,24 @@ export class GameComponent implements OnInit {
     });
   }
 
+  /**
+   * Dispatch GameReset Action from the store, fresh start (removes all the pawns and set turn to player one)
+   */
   resetGame(){
     this.store.dispatch(new GameReset());
   }
 
+  /**
+   * Dispatch CancelLastMove Action from the store, remove last pawn played and sets turn to the last player
+   */
   cancelLastMove(){
     this.store.dispatch(new CancelLastMove());
   }
 
+  /**
+   * Play a pawn if the column played isn't full (shows a snackbar if so), end games if the grid is full or if the player won
+   * @param {number} column column in wich the pawns will be put
+   */
   public playPawn(column: number){
     this.game.pipe(take(1)).subscribe(g => {
       const playedPawn: Pawn = {
@@ -74,7 +109,12 @@ export class GameComponent implements OnInit {
     })
   }
 
-  private getYPositionInColumn(column: number){
+  /**
+   * Get the number of pawns in a column to set the vertical position of the next pawn that will be played in that column
+   * @param {number} column column in wich the pawns will be put
+   * @return {number}
+   */
+  private getYPositionInColumn(column: number): number{
     let pawnsInColumn: number = 0;
     this.game.pipe(take(1)).subscribe(g => {
       // On récupère le nombre de pions dans la colonne passée en param
@@ -84,7 +124,12 @@ export class GameComponent implements OnInit {
     return pawnsInColumn;
   }
 
-  // Pion à montrer passé en Input aux component des cases sur la grille
+  /**
+   * Get a Pawn if present on given coordinates
+   * @param {number} x column in wich the pawns will be put
+   * @param {number} y row in wich the pawns will be put
+   * @return {Pawn}
+   */
   public displayPawn(x: number, y: number): Pawn{
     let pawnToDisplay!: Pawn;
     
@@ -99,6 +144,10 @@ export class GameComponent implements OnInit {
     return pawnToDisplay;
   }
 
+  /**
+   * Dispatch CheckWinner Action from the store, checks if played pawn causes a victory
+   * @param {Pawn} playedPawn pawn that was just played
+   */
   private checkVictory(playedPawn: Pawn){
     this.store.dispatch(new CheckWinner(playedPawn)).subscribe(store => {
       if(store.game.game.winner){
@@ -107,6 +156,10 @@ export class GameComponent implements OnInit {
     });
   }
 
+  /**
+   * Shows the end game dialog
+   * @param {Player} winner player that played that last pawn and won
+   */
   public openEndGameDialog(winner?: Player) {
     const dialogRef = this.dialog.open(EndGameComponent, {
       data: winner,
@@ -128,6 +181,12 @@ export class GameComponent implements OnInit {
     });
   }
 
+  /**
+   * Animate a falling pawn in the column played, falling up to the row where the pawn will fall
+   * @param {number} column column played
+   * @param {number} row row where the animation ends
+   * @param {Player} player player that played to determine the color of the pawn to animate
+   */
   animateFallingPawn(column: number, row: number, player: Player){
     const pawnColor = player.id === 0 ? "red" : "yellow";
     let pawnToAnimate: HTMLElement = document.getElementsByClassName(`falling-${pawnColor}-${column}`)[0] as HTMLElement;
