@@ -1,0 +1,20 @@
+.not-found{
+
+    text-align: center;
+    margin-top: 50px;
+
+    &__title{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__image{
+        max-width: 80%;
+        max-height: 40vh;
+    }
+
+    &__action{
+        margin-top: 100px;
+        padding: 5px 30px;
+    }
+}
