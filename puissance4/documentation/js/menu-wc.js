@@ -81,13 +81,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/GameModule.html" data-type="entity-link" >GameModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GameModule-6f421a27b8ce10d4d567013aa70391a2"' : 'data-target="#xs-components-links-module-GameModule-6f421a27b8ce10d4d567013aa70391a2"' }>
+                                            'data-target="#components-links-module-GameModule-fe22893ecd26523f92320df58e9b0642"' : 'data-target="#xs-components-links-module-GameModule-fe22893ecd26523f92320df58e9b0642"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GameModule-6f421a27b8ce10d4d567013aa70391a2"' :
-                                            'id="xs-components-links-module-GameModule-6f421a27b8ce10d4d567013aa70391a2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GameModule-fe22893ecd26523f92320df58e9b0642"' :
+                                            'id="xs-components-links-module-GameModule-fe22893ecd26523f92320df58e9b0642"' }>
                                             <li class="link">
                                                 <a href="components/CaseComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >CaseComponent</a>
                                             </li>
