@@ -1,0 +1,26 @@
+{
+  "hosting": [{
+    "site": "puissance-4-6585f",
+    "public": "dist/puissance4",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  {
+    "site": "puissance-4-documentation",
+    "public": "documentation",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }]
+}

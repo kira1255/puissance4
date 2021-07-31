@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy:all": "firebase deploy",
+    "deploy:app": "firebase deploy --only hosting:puissance-4-6585f",
+    "deploy:documentation": "firebase deploy --only hosting:puissance-4-documentation",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "compodoc": "npx compodoc -p tsconfig.doc.json -s"
