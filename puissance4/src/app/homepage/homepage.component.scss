@@ -4,9 +4,44 @@
     &__title{
         font-family: "Train One";
         font-size: 3rem;
+        text-shadow: 2px 2px 6px #999;
 
         &--small{
-            font-size: 2rem;
+            font-size: 2.6rem;
+            text-shadow: 2px 2px 6px #999;
+        }
+    }
+
+    &__play-button{
+        font-size: 1.2rem;
+        padding: 5px 30px;
+        margin-top: 20px;
+    }
+
+    &__settings-title{
+        margin-bottom: 20px;
+    }
+
+    &__settings-item{
+        margin: 2% 20%;
+
+        .mat-slider-horizontal{
+            width: 100%;
+        }
+
+        ::ng-deep {
+            .mat-slider-thumb-label {
+                transform: rotate(45deg) !important;
+                border-radius: 50% 50% 0 !important;
+            }
+            
+            .mat-slider-thumb {
+                transform: scale(0) !important;
+            }
+            
+            .mat-slider-thumb-label-text {
+                opacity: 1 !important;
+            }
         }
     }
 }

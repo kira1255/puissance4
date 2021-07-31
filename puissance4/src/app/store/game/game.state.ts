@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { removeItem } from '@ngxs/store/operators';
 import { Game } from 'src/app/models/game';
-import { CheckWinner, GameInit, PlayPawn, GameReset, CancelLastMove } from './game.actions';
+import { CheckWinner, GameInit, PlayPawn, GameReset, CancelLastMove, SetRows, SetColumns } from './game.actions';
 import { VictoryCheckService } from '../services/victory-check.service';
 import { Player } from 'src/app/models/player';
 
@@ -39,12 +39,48 @@ export class GameState {
         return state.game;
     }
 
+    @Selector()
+    static getRows(state: GameStateModel) {
+        return state.game.rows;
+    }
+
+    @Selector()
+    static getColumns(state: GameStateModel) {
+        return state.game.columns;
+    }
+
     @Action(GameInit)
     initGame({getState, patchState }: StateContext<GameStateModel>, {payload}: GameInit) {
         const state = getState();
         patchState({
             ...state, game: {
                 ...payload,
+                turn: state.game.player1,
+            }
+        });
+    }
+
+    @Action(SetRows)
+    setRows({getState, patchState }: StateContext<GameStateModel>, {rows}: SetRows) {
+        const state = getState();
+        patchState({
+            ...state, game: {
+                ...state.game,
+                rows: rows,
+                pawns: [],
+                turn: state.game.player1,
+            }
+        });
+    }
+
+    @Action(SetColumns)
+    setColumns({getState, patchState }: StateContext<GameStateModel>, {columns}: SetColumns) {
+        const state = getState();
+        patchState({
+            ...state, game: {
+                ...state.game,
+                columns: columns,
+                pawns: [],
                 turn: state.game.player1,
             }
         });

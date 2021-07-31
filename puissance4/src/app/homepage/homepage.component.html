@@ -1,13 +1,25 @@
 <div class="homepage" fxLayout="row" fxLayout.xs="column" fxFlexFill>
 
-    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="55">
+    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="30">
         <div fxLayout="column" fxLayoutAlign="space-around" fxFlexFill>
             <div fxFlexAlign="center" fxFlexJustify="center">Puissance 4</div>
         </div>
     </div>
     <div fxFlex="50" class="homepage__menu">
-        <div fxLayout="column" fxLayoutAlign="space-around" fxFlexFill>
-            <button (click)="startGame()" mat-flat-button fxFlexAlign="center" fxFlexJustify="center" color="primary">Jouer</button>
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="flex-start" fxFlexFill>
+            <div class="homepage__settings-item">
+                <h3 class="homepage__settings-title">Colonnes :</h3>
+                <mat-slider (change)="setColumns($event)" [ngModel]="(columns | async)" color="primary"
+                 thumbLabel tickInterval="1" step="2" min="5" max="9"></mat-slider>
+            </div>
+
+            <div class="homepage__settings-item">
+                <h3 class="homepage__settings-title">Lignes :</h3>
+                <mat-slider (change)="setRows($event)" [ngModel]="(rows | async)" color="primary"
+                 thumbLabel tickInterval="1" step="2" min="4" max="8"></mat-slider>
+            </div>
+            
+            <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary">Jouer</button>
         </div>
     </div>
 
