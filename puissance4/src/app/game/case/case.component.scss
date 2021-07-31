@@ -4,6 +4,7 @@
     background: url("/assets/img/empty-case.png");
     background-size: contain;
     outline: 1px solid #2867b2;
+    box-shadow: 2px 2px 2px #2867b2, -2px -2px 2px #2867b2, 2px -2px 2px #2867b2, -2px 2px 2px #2867b2;
 
     &:before{
         content: "";
