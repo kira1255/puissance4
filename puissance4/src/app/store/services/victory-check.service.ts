@@ -27,7 +27,7 @@ export class VictoryCheckService {
         else alignedPawns = 1;
 
         if(alignedPawns > 3) {
-          console.info(pawnPlayed.player.name + " a aligné 4 pions verticalement !")
+          console.info(pawnPlayed.player.name + " a aligné 4 pions verticalement! 🎉")
           won = true;
         }
     });
@@ -53,7 +53,7 @@ export class VictoryCheckService {
         else alignedPawns = 1;
 
         if(alignedPawns > 3) {
-          console.info(pawnPlayed.player.name + " a aligné 4 pions horizontalement !")
+          console.info(pawnPlayed.player.name + " a aligné 4 pions horizontalement! 🎉")
           won = true;
         }
     });
@@ -80,7 +80,7 @@ export class VictoryCheckService {
         else alignedPawns = 1;
 
         if(alignedPawns > 3) {
-          console.info(pawnPlayed.player.name + " a aligné 4 pions en diagonale !")
+          console.info(pawnPlayed.player.name + " a aligné 4 pions en diagonale! 🎉")
           won = true;
         }
     });
@@ -107,7 +107,7 @@ export class VictoryCheckService {
         else alignedPawns = 1;
 
         if(alignedPawns > 3) {
-          console.info(pawnPlayed.player.name + " a aligné 4 pions en diagonale !")
+          console.info(pawnPlayed.player.name + " a aligné 4 pions en diagonale! 🎉")
           won = true;
         }
     });

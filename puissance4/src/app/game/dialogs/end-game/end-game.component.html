@@ -1,11 +1,14 @@
-<h1 mat-dialog-title *ngIf="winner; else draw">
+<h1 mat-dialog-title *ngIf="winner; else drawTitle">
     <span *ngIf="winner.id === 0"> Victoire des Rouges !</span>
     <span *ngIf="winner.id === 1"> Victoire des Jaunes !</span>
 </h1>
-<ng-template #draw><h2 mat-dialog-title>Match nul</h2></ng-template>
+<ng-template #drawTitle><h1 mat-dialog-title>Match nul !</h1><h2 mat-dialog-title>La grille est pleine...</h2></ng-template>
 <mat-dialog-content class="mat-typography">
-    <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />
-    <img *ngIf="winner.id === 1" src="/assets/img/trophee-yellow.svg" class="win__image" />
+    <ng-container mat-dialog-title *ngIf="winner; else drawImage">
+        <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />
+        <img *ngIf="winner.id === 1" src="/assets/img/trophee-yellow.svg" class="win__image" />
+    </ng-container>
+    <ng-template #drawImage><img src="/assets/img/draw.svg" class="win__image" /></ng-template>
 </mat-dialog-content>
 <mat-dialog-actions align="center">
   <button mat-button mat-dialog-close="quit">Quitter</button>

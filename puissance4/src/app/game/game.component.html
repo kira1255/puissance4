@@ -3,7 +3,10 @@
     <div class="game__grid-container" [ngClass]="'game__grid-container--' + (game | async)!.columns">
         <ng-container  *ngFor="let caseY of gridY; let y = index;">
             <ng-container  *ngFor="let caseX of gridX; let x = index;">
-                <app-case (click)="playPawn(x)" [pawn]="displayPawn(x, (gridY.length - 1) - y)"></app-case>
+                <app-case (click)="playPawn(x)" [pawn]="displayPawn(x, (gridY.length - 1) - y)">
+                    <div *ngIf="y === 0" class="case__animated case__animated--red" [ngClass]="'falling-red-' + x"></div>
+                    <div *ngIf="y === 0" class="case__animated case__animated--yellow" [ngClass]="'falling-yellow-' + x"></div>
+                </app-case>
             </ng-container >
         </ng-container >
     </div>
@@ -16,7 +19,7 @@
         </div>
         <div fxFlex="20" class="game__action">
             <button [disabled]="(game | async)!.pawns!.length == 0" mat-fab class="game__action--reset" (click)="resetGame()">
-                <mat-icon>refresh</mat-icon>
+                <mat-icon>sync</mat-icon>
             </button>
         </div>
         <div fxFlex="30"></div>

@@ -59,7 +59,7 @@ export class GameComponent implements OnInit {
       }
       this.store.dispatch(new PlayPawn( playedPawn )).subscribe(
         (store) => {
-          
+          this.animateFallingPawn(playedPawn.x, playedPawn.y, g.turn!);
           this.checkVictory(playedPawn);
 
           // Vérif : Si la grille est pleine, on termine le jeu sur un match nul
@@ -87,13 +87,14 @@ export class GameComponent implements OnInit {
   // Pion à montrer passé en Input aux component des cases sur la grille
   public displayPawn(x: number, y: number): Pawn{
     let pawnToDisplay!: Pawn;
+    
     this.game.pipe(take(1)).subscribe(g => {
       // On check dans la liste de pions du store si on en a un aux coordonnées de la case passée en paramètres
       g.pawns.map(p => {
-        if(p.x === x && p.y === y){
+        if (p.x === x && p.y === y) {
           pawnToDisplay = p;
         }
-      })
+      });
     });
     return pawnToDisplay;
   }
@@ -125,6 +126,20 @@ export class GameComponent implements OnInit {
           break;
       }
     });
+  }
+
+  animateFallingPawn(column: number, row: number, player: Player){
+    const pawnColor = player.id === 0 ? "red" : "yellow";
+    let pawnToAnimate: HTMLElement = document.getElementsByClassName(`falling-${pawnColor}-${column}`)[0] as HTMLElement;
+    pawnToAnimate.classList.add("show");
+    setTimeout(() => {
+      pawnToAnimate.style.top = `${((this.gridY.length - 1 - row) * 100)}%`;
+    }, 10);
+    setTimeout(() => {
+      pawnToAnimate.classList.remove("show");
+      pawnToAnimate.style.top = "0%";
+    }, 140);
+    
   }
 
 }
