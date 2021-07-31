@@ -1,5 +1,6 @@
 <h1 mat-dialog-title *ngIf="winner; else draw">
-    {{ winner.id === 0 ? redWins : yellowWins }} 
+    <span *ngIf="winner.id === 0"> Victoire des Rouges !</span>
+    <span *ngIf="winner.id === 1"> Victoire des Jaunes !</span>
 </h1>
 <ng-template #draw><h2 mat-dialog-title>Match nul</h2></ng-template>
 <mat-dialog-content class="mat-typography">
@@ -8,5 +9,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close="quit">Quitter</button>
-  <button mat-button mat-dialog-close="replay" cdkFocusInitial>Rejouer</button>
+  <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial>Rejouer</button>
 </mat-dialog-actions>

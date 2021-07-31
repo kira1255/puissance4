@@ -1,6 +1,6 @@
 <div class="game" ngClass.lt-sm="game--fullscreen" ngClass.lt-md="game--almost-fullscreen">
     <!-- <h1 class="game__turn-indicator">{{ (game | async)!.turn!.name }}</h1> -->
-    <div class="game__grid-container">
+    <div class="game__grid-container" [ngClass]="'game__grid-container--' + (game | async)!.columns">
         <ng-container  *ngFor="let caseY of gridY; let y = index;">
             <ng-container  *ngFor="let caseX of gridX; let x = index;">
                 <app-case (click)="playPawn(x)" [pawn]="displayPawn(x, (gridY.length - 1) - y)"></app-case>

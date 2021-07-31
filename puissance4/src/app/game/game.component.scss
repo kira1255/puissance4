@@ -1,5 +1,5 @@
 .game{
-    max-width: 40%;
+    max-width: 45%;
     margin: auto;
 
     &__grid-container{
@@ -8,11 +8,30 @@
         grid-template-columns: repeat(7, 1fr);
         border: 12px solid #2867b2;
         border-radius: 23px;
+
+        &--5{
+            grid-template-columns: repeat(5, 1fr);
+        }
+        &--7{
+            grid-template-columns: repeat(7, 1fr);
+        }
+        &--9{
+            grid-template-columns: repeat(9, 1fr);
+        }
+        &--11{
+            grid-template-columns: repeat(11, 1fr);
+        }
+        &--13{
+            grid-template-columns: repeat(13, 1fr);
+        }
+        &--15{
+            grid-template-columns: repeat(15, 1fr);
+        }
     }
 }
 
 .game--fullscreen{
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -31,4 +50,5 @@
 
 .game__actions{
     margin: 20px 0px;
+    padding-bottom: 30px;
 }

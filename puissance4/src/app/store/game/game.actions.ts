@@ -25,6 +25,18 @@ export class PlayPawn {
     constructor(public pawn: Pawn) {}
 }
 
+export class SetRows {
+    static readonly type = '[Game] Set Rows';
+
+    constructor(public rows: number) {}
+}
+
+export class SetColumns {
+    static readonly type = '[Game] Set Columns';
+
+    constructor(public columns: number) {}
+}
+
 export class CheckWinner {
     static readonly type = '[Game] Determine winner';
 
