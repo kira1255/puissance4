@@ -7,7 +7,7 @@
     <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />
     <img *ngIf="winner.id === 1" src="/assets/img/trophee-yellow.svg" class="win__image" />
 </mat-dialog-content>
-<mat-dialog-actions align="end">
+<mat-dialog-actions align="center">
   <button mat-button mat-dialog-close="quit">Quitter</button>
   <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial>Rejouer</button>
 </mat-dialog-actions>
