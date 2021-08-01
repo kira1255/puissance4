@@ -16,15 +16,17 @@
   <meta name="apple-mobile-web-app-title" content="Puissance 4">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Prefetching img for css -->
+  <link rel="preload" as="image" href="/assets/img/red-case.png">
+  <link rel="preload" as="image" href="/assets/img/yellow-case.png">
+  <link rel="preload" as="image" href="/assets/img/empty-case.png">
 </head>
 <body class="mat-typography mat-app-background">
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 
   <!-- Preload IMG -->
-  <img src="/assets/img/empty-case.png" style="display:none;" />
-  <img src="/assets/img/red-case.png" style="display:none;" />
-  <img src="/assets/img/yellow-case.png" style="display:none;" />
   <img src="/assets/img/trophee-red.svg" style="display:none;" />
   <img src="/assets/img/trophee-yellow.svg" style="display:none;" />
   <img src="/assets/img/not-found.svg" style="display:none;" />
