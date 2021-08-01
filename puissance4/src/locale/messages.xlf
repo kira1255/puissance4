@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6103732690959699402" datatype="html">
+        <source> Victoire des Rouges !</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">red won</note>
+      </trans-unit>
+      <trans-unit id="9161206698466618249" datatype="html">
+        <source> Victoire des Jaunes !</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">yellow won</note>
+      </trans-unit>
+      <trans-unit id="9172109993885162543" datatype="html">
+        <source>Match nul !</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">nobody won</note>
+      </trans-unit>
+      <trans-unit id="2498953096165731695" datatype="html">
+        <source>La grille est pleine...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">the grid is full</note>
+      </trans-unit>
+      <trans-unit id="3387197750091991711" datatype="html">
+        <source>Quitter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">quit</note>
+      </trans-unit>
+      <trans-unit id="2865587361094573473" datatype="html">
+        <source>Rejouer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/dialogs/end-game/end-game.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">play again</note>
+      </trans-unit>
+      <trans-unit id="1033902658943504121" datatype="html">
+        <source>Colonnes :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">columns</note>
+      </trans-unit>
+      <trans-unit id="6903985259809970913" datatype="html">
+        <source>Lignes :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <note priority="1" from="description">rows</note>
+      </trans-unit>
+      <trans-unit id="8942544937304152508" datatype="html">
+        <source>Jouer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/homepage/homepage.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">play</note>
+      </trans-unit>
+      <trans-unit id="7923515486891254247" datatype="html">
+        <source>🧐 Aucun pion en jeu !</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/store/game/game.state.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3270878154577438423" datatype="html">
+        <source>🧐 La colonne est pleine !</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/store/game/game.state.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

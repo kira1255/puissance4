@@ -158,7 +158,7 @@ export class GameState {
         const pawnsList = [...state.game.pawns, pawn]
         // check : column is full already
         if(pawn.y >= state.game.rows){
-            throw new Error('🧐 La colonne est pleine !');
+            throw new Error($localize`🧐 La colonne est pleine !`);
         }
         patchState({
             ...state, game: {
