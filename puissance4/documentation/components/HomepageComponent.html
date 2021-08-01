@@ -153,6 +153,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#navigateToExternalURL" >navigateToExternalURL</a>
+                            </li>
+                            <li>
                                 <a href="#setColumns" >setColumns</a>
                             </li>
                             <li>
@@ -183,6 +186,81 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigateToExternalURL"></a>
+                    <span class="name">
+                        <span ><b>navigateToExternalURL</b></span>
+                        <a href="#navigateToExternalURL"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>navigateToExternalURL(link: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/homepage/homepage.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navigate to an external link</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>link</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>link to navigate to</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -553,6 +631,14 @@ export class HomepageComponent {
     this.store.dispatch(new SetRows(event.value));
   }
 
+  /**
+   * Navigate to an external link
+   * @param {string} link link to navigate to
+   */
+  navigateToExternalURL(link: string){
+    window.location.href &#x3D; link;
+  }
+
 }
 </code></pre>
     </div>
@@ -560,26 +646,42 @@ export class HomepageComponent {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;homepage&quot; fxLayout&#x3D;&quot;row&quot; fxLayout.xs&#x3D;&quot;column&quot; fxFlexFill&gt;
 
-    &lt;div fxFlex&#x3D;&quot;50&quot; class&#x3D;&quot;homepage__title&quot; ngClass.xs&#x3D;&quot;homepage__title--small&quot; fxFlex.xs&#x3D;&quot;40&quot;&gt;
+    &lt;div fxFlex&#x3D;&quot;50&quot; class&#x3D;&quot;homepage__title&quot; ngClass.xs&#x3D;&quot;homepage__title--small&quot; fxFlex.xs&#x3D;&quot;30&quot;&gt;
         &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;space-around&quot; fxLayoutAlign.xs&#x3D;&quot;flex-end&quot; fxFlexFill&gt;
             &lt;img fxFlexAlign&#x3D;&quot;center&quot; fxFlexJustify&#x3D;&quot;center&quot; class&#x3D;&quot;homepage__image&quot; src&#x3D;&quot;/assets/img/arcade.svg&quot; /&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div fxFlex&#x3D;&quot;50&quot; class&#x3D;&quot;homepage__menu&quot;&gt;
+    &lt;div fxFlex&#x3D;&quot;50&quot; fxFlex.xs&#x3D;&quot;70&quot; class&#x3D;&quot;homepage__menu&quot;&gt;
         &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center&quot; fxLayoutAlign.xs&#x3D;&quot;flex-start&quot; fxFlexFill&gt;
             &lt;div class&#x3D;&quot;homepage__settings-item&quot;&gt;
-                &lt;h3 class&#x3D;&quot;homepage__settings-title&quot;&gt;Colonnes :&lt;/h3&gt;
+                &lt;h3 class&#x3D;&quot;homepage__settings-title&quot; i18n&#x3D;&quot;columns&quot;&gt;Colonnes :&lt;/h3&gt;
                 &lt;mat-slider (change)&#x3D;&quot;setColumns($event)&quot; [ngModel]&#x3D;&quot;(columns | async)&quot; color&#x3D;&quot;primary&quot;
                  thumbLabel tickInterval&#x3D;&quot;1&quot; step&#x3D;&quot;2&quot; min&#x3D;&quot;5&quot; max&#x3D;&quot;9&quot;&gt;&lt;/mat-slider&gt;
             &lt;/div&gt;
 
             &lt;div class&#x3D;&quot;homepage__settings-item&quot;&gt;
-                &lt;h3 class&#x3D;&quot;homepage__settings-title&quot;&gt;Lignes :&lt;/h3&gt;
+                &lt;h3 class&#x3D;&quot;homepage__settings-title&quot; i18n&#x3D;&quot;rows&quot;&gt;Lignes :&lt;/h3&gt;
                 &lt;mat-slider (change)&#x3D;&quot;setRows($event)&quot; [ngModel]&#x3D;&quot;(rows | async)&quot; color&#x3D;&quot;primary&quot;
                  thumbLabel tickInterval&#x3D;&quot;1&quot; step&#x3D;&quot;2&quot; min&#x3D;&quot;4&quot; max&#x3D;&quot;8&quot;&gt;&lt;/mat-slider&gt;
             &lt;/div&gt;
+            &lt;div class&#x3D;&quot;homepage__settings-item&quot;&gt;
+                &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-between&quot; fxFlexFill&gt;
+                    &lt;button mat-icon-button class&#x3D;&quot;homepage__flag-button&quot; 
+                    (click)&#x3D;&quot;navigateToExternalURL(&#x27;https://puissance-4-6585f.web.app/&#x27;)&quot;&gt;
+                        &lt;img class&#x3D;&quot;homepage__flag&quot; src&#x3D;&quot;/assets/img/flag-fr.png&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;button mat-icon-button class&#x3D;&quot;homepage__flag-button&quot; 
+                    (click)&#x3D;&quot;navigateToExternalURL(&#x27;https://puissance-4-en.web.app/&#x27;)&quot;&gt;
+                        &lt;img class&#x3D;&quot;homepage__flag&quot; src&#x3D;&quot;/assets/img/flag-en.png&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;button mat-icon-button class&#x3D;&quot;homepage__flag-button&quot; 
+                    (click)&#x3D;&quot;navigateToExternalURL(&#x27;https://puissance-4-es.web.app/&#x27;)&quot;&gt;
+                        &lt;img class&#x3D;&quot;homepage__flag&quot; src&#x3D;&quot;/assets/img/flag-es.png&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
             
-            &lt;button class&#x3D;&quot;homepage__play-button&quot; (click)&#x3D;&quot;startGame()&quot; mat-raised-button fxFlexAlign&#x3D;&quot;center&quot; fxFlexJustify&#x3D;&quot;center&quot; color&#x3D;&quot;primary&quot;&gt;Jouer&lt;/button&gt;
+            &lt;button class&#x3D;&quot;homepage__play-button&quot; (click)&#x3D;&quot;startGame()&quot; mat-raised-button fxFlexAlign&#x3D;&quot;center&quot; fxFlexJustify&#x3D;&quot;center&quot; color&#x3D;&quot;primary&quot; i18n&#x3D;&quot;play&quot;&gt;Jouer&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
@@ -613,7 +715,7 @@ export class HomepageComponent {
     &amp;__play-button{
         font-size: 1.2rem;
         padding: 5px 30px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     &amp;__settings-title{
@@ -641,6 +743,12 @@ export class HomepageComponent {
                 opacity: 1 !important;
             }
         }
+    }
+
+    &amp;__flag{
+        width: 100%;
+        box-shadow: 2px 2px 2px #dcdcdc;
+        border-radius: 50px;
     }
 }</code></pre>
     </div>
@@ -670,7 +778,7 @@ export class HomepageComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="homepage" fxLayout="row" fxLayout.xs="column" fxFlexFill>    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="40">        <div fxLayout="column" fxLayoutAlign="space-around" fxLayoutAlign.xs="flex-end" fxFlexFill>            <img fxFlexAlign="center" fxFlexJustify="center" class="homepage__image" src="/assets/img/arcade.svg" />        </div>    </div>    <div fxFlex="50" class="homepage__menu">        <div fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="flex-start" fxFlexFill>            <div class="homepage__settings-item">                <h3 class="homepage__settings-title">Colonnes :</h3>                <mat-slider (change)="setColumns($event)" [ngModel]="(columns | async)" color="primary"                 thumbLabel tickInterval="1" step="2" min="5" max="9"></mat-slider>            </div>            <div class="homepage__settings-item">                <h3 class="homepage__settings-title">Lignes :</h3>                <mat-slider (change)="setRows($event)" [ngModel]="(rows | async)" color="primary"                 thumbLabel tickInterval="1" step="2" min="4" max="8"></mat-slider>            </div>                        <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary">Jouer</button>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="homepage" fxLayout="row" fxLayout.xs="column" fxFlexFill>    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="30">        <div fxLayout="column" fxLayoutAlign="space-around" fxLayoutAlign.xs="flex-end" fxFlexFill>            <img fxFlexAlign="center" fxFlexJustify="center" class="homepage__image" src="/assets/img/arcade.svg" />        </div>    </div>    <div fxFlex="50" fxFlex.xs="70" class="homepage__menu">        <div fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="flex-start" fxFlexFill>            <div class="homepage__settings-item">                <h3 class="homepage__settings-title" i18n="columns">Colonnes :</h3>                <mat-slider (change)="setColumns($event)" [ngModel]="(columns | async)" color="primary"                 thumbLabel tickInterval="1" step="2" min="5" max="9"></mat-slider>            </div>            <div class="homepage__settings-item">                <h3 class="homepage__settings-title" i18n="rows">Lignes :</h3>                <mat-slider (change)="setRows($event)" [ngModel]="(rows | async)" color="primary"                 thumbLabel tickInterval="1" step="2" min="4" max="8"></mat-slider>            </div>            <div class="homepage__settings-item">                <div fxLayout="row" fxLayoutAlign="space-between" fxFlexFill>                    <button mat-icon-button class="homepage__flag-button"                     (click)="navigateToExternalURL(\'https://puissance-4-6585f.web.app/\')">                        <img class="homepage__flag" src="/assets/img/flag-fr.png" />                    </button>                    <button mat-icon-button class="homepage__flag-button"                     (click)="navigateToExternalURL(\'https://puissance-4-en.web.app/\')">                        <img class="homepage__flag" src="/assets/img/flag-en.png" />                    </button>                    <button mat-icon-button class="homepage__flag-button"                     (click)="navigateToExternalURL(\'https://puissance-4-es.web.app/\')">                        <img class="homepage__flag" src="/assets/img/flag-es.png" />                    </button>                </div>            </div>                        <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary" i18n="play">Jouer</button>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CaseComponent', 'selector': 'app-case'},{'name': 'EndGameComponent', 'selector': 'app-end-game'},{'name': 'GameComponent', 'selector': 'app-game'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomepageComponent'};

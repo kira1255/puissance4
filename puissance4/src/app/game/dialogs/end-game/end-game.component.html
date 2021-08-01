@@ -1,8 +1,8 @@
 <h1 mat-dialog-title *ngIf="winner; else drawTitle">
-    <span *ngIf="winner.id === 0"> Victoire des Rouges !</span>
-    <span *ngIf="winner.id === 1"> Victoire des Jaunes !</span>
+    <span *ngIf="winner.id === 0" i18n="red won"> Victoire des Rouges !</span>
+    <span *ngIf="winner.id === 1" i18n="yellow won"> Victoire des Jaunes !</span>
 </h1>
-<ng-template #drawTitle><h1 mat-dialog-title>Match nul !</h1><h2 mat-dialog-title>La grille est pleine...</h2></ng-template>
+<ng-template #drawTitle><h1 mat-dialog-title i18n="nobody won" >Match nul !</h1><h2 mat-dialog-title i18n="the grid is full">La grille est pleine...</h2></ng-template>
 <mat-dialog-content class="mat-typography">
     <ng-container mat-dialog-title *ngIf="winner; else drawImage">
         <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />
@@ -11,6 +11,6 @@
     <ng-template #drawImage><img src="/assets/img/draw.svg" class="win__image" /></ng-template>
 </mat-dialog-content>
 <mat-dialog-actions align="center">
-  <button mat-button mat-dialog-close="quit">Quitter</button>
-  <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial>Rejouer</button>
+  <button mat-button mat-dialog-close="quit" i18n="quit">Quitter</button>
+  <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial i18n="play again">Rejouer</button>
 </mat-dialog-actions>

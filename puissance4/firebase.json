@@ -1,7 +1,37 @@
 {
   "hosting": [{
     "site": "puissance-4-6585f",
-    "public": "dist/puissance4",
+    "public": "dist/puissance4/fr",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  {
+    "site": "puissance-4-en",
+    "public": "dist/puissance4/en",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  {
+    "site": "puissance-4-es",
+    "public": "dist/puissance4/es",
     "ignore": [
       "firebase.json",
       "**/.*",

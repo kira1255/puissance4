@@ -1,25 +1,41 @@
 <div class="homepage" fxLayout="row" fxLayout.xs="column" fxFlexFill>
 
-    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="40">
+    <div fxFlex="50" class="homepage__title" ngClass.xs="homepage__title--small" fxFlex.xs="30">
         <div fxLayout="column" fxLayoutAlign="space-around" fxLayoutAlign.xs="flex-end" fxFlexFill>
             <img fxFlexAlign="center" fxFlexJustify="center" class="homepage__image" src="/assets/img/arcade.svg" />
         </div>
     </div>
-    <div fxFlex="50" class="homepage__menu">
+    <div fxFlex="50" fxFlex.xs="70" class="homepage__menu">
         <div fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="flex-start" fxFlexFill>
             <div class="homepage__settings-item">
-                <h3 class="homepage__settings-title">Colonnes :</h3>
+                <h3 class="homepage__settings-title" i18n="columns">Colonnes :</h3>
                 <mat-slider (change)="setColumns($event)" [ngModel]="(columns | async)" color="primary"
                  thumbLabel tickInterval="1" step="2" min="5" max="9"></mat-slider>
             </div>
 
             <div class="homepage__settings-item">
-                <h3 class="homepage__settings-title">Lignes :</h3>
+                <h3 class="homepage__settings-title" i18n="rows">Lignes :</h3>
                 <mat-slider (change)="setRows($event)" [ngModel]="(rows | async)" color="primary"
                  thumbLabel tickInterval="1" step="2" min="4" max="8"></mat-slider>
             </div>
+            <div class="homepage__settings-item">
+                <div fxLayout="row" fxLayoutAlign="space-between" fxFlexFill>
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-6585f.web.app/')">
+                        <img class="homepage__flag" src="/assets/img/flag-fr.png" />
+                    </button>
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-en.web.app/')">
+                        <img class="homepage__flag" src="/assets/img/flag-en.png" />
+                    </button>
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-es.web.app/')">
+                        <img class="homepage__flag" src="/assets/img/flag-es.png" />
+                    </button>
+                </div>
+            </div>
             
-            <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary">Jouer</button>
+            <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary" i18n="play">Jouer</button>
         </div>
     </div>
 

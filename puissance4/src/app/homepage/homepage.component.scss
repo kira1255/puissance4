@@ -21,7 +21,7 @@
     &__play-button{
         font-size: 1.2rem;
         padding: 5px 30px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     &__settings-title{
@@ -49,5 +49,11 @@
                 opacity: 1 !important;
             }
         }
+    }
+
+    &__flag{
+        width: 100%;
+        box-shadow: 2px 2px 2px #dcdcdc;
+        border-radius: 50px;
     }
 }

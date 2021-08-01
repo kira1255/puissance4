@@ -5,6 +5,22 @@
   "projects": {
     "puissance4": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": {
+          "code": "fr",
+          "baseHref": "/"
+        },
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/"
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "/"
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -20,6 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/",
             "outputPath": "dist/puissance4",
             "index": "src/index.html",
             "main": "src/main.ts",

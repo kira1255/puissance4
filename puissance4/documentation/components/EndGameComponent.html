@@ -388,10 +388,10 @@ export class EndGameComponent{
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;h1 mat-dialog-title *ngIf&#x3D;&quot;winner; else drawTitle&quot;&gt;
-    &lt;span *ngIf&#x3D;&quot;winner.id &#x3D;&#x3D;&#x3D; 0&quot;&gt; Victoire des Rouges !&lt;/span&gt;
-    &lt;span *ngIf&#x3D;&quot;winner.id &#x3D;&#x3D;&#x3D; 1&quot;&gt; Victoire des Jaunes !&lt;/span&gt;
+    &lt;span *ngIf&#x3D;&quot;winner.id &#x3D;&#x3D;&#x3D; 0&quot; i18n&#x3D;&quot;red won&quot;&gt; Victoire des Rouges !&lt;/span&gt;
+    &lt;span *ngIf&#x3D;&quot;winner.id &#x3D;&#x3D;&#x3D; 1&quot; i18n&#x3D;&quot;yellow won&quot;&gt; Victoire des Jaunes !&lt;/span&gt;
 &lt;/h1&gt;
-&lt;ng-template #drawTitle&gt;&lt;h1 mat-dialog-title&gt;Match nul !&lt;/h1&gt;&lt;h2 mat-dialog-title&gt;La grille est pleine...&lt;/h2&gt;&lt;/ng-template&gt;
+&lt;ng-template #drawTitle&gt;&lt;h1 mat-dialog-title i18n&#x3D;&quot;nobody won&quot; &gt;Match nul !&lt;/h1&gt;&lt;h2 mat-dialog-title i18n&#x3D;&quot;the grid is full&quot;&gt;La grille est pleine...&lt;/h2&gt;&lt;/ng-template&gt;
 &lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
     &lt;ng-container mat-dialog-title *ngIf&#x3D;&quot;winner; else drawImage&quot;&gt;
         &lt;img *ngIf&#x3D;&quot;winner.id &#x3D;&#x3D;&#x3D; 0&quot; src&#x3D;&quot;/assets/img/trophee-red.svg&quot; class&#x3D;&quot;win__image&quot; /&gt;
@@ -400,8 +400,8 @@ export class EndGameComponent{
     &lt;ng-template #drawImage&gt;&lt;img src&#x3D;&quot;/assets/img/draw.svg&quot; class&#x3D;&quot;win__image&quot; /&gt;&lt;/ng-template&gt;
 &lt;/mat-dialog-content&gt;
 &lt;mat-dialog-actions align&#x3D;&quot;center&quot;&gt;
-  &lt;button mat-button mat-dialog-close&#x3D;&quot;quit&quot;&gt;Quitter&lt;/button&gt;
-  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; mat-dialog-close&#x3D;&quot;replay&quot; cdkFocusInitial&gt;Rejouer&lt;/button&gt;
+  &lt;button mat-button mat-dialog-close&#x3D;&quot;quit&quot; i18n&#x3D;&quot;quit&quot;&gt;Quitter&lt;/button&gt;
+  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; mat-dialog-close&#x3D;&quot;replay&quot; cdkFocusInitial i18n&#x3D;&quot;play again&quot;&gt;Rejouer&lt;/button&gt;
 &lt;/mat-dialog-actions&gt;
 </code></pre>
     </div>
@@ -449,7 +449,7 @@ export class EndGameComponent{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title *ngIf="winner; else drawTitle">    <span *ngIf="winner.id === 0"> Victoire des Rouges !</span>    <span *ngIf="winner.id === 1"> Victoire des Jaunes !</span></h1><ng-template #drawTitle><h1 mat-dialog-title>Match nul !</h1><h2 mat-dialog-title>La grille est pleine...</h2></ng-template><mat-dialog-content class="mat-typography">    <ng-container mat-dialog-title *ngIf="winner; else drawImage">        <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />        <img *ngIf="winner.id === 1" src="/assets/img/trophee-yellow.svg" class="win__image" />    </ng-container>    <ng-template #drawImage><img src="/assets/img/draw.svg" class="win__image" /></ng-template></mat-dialog-content><mat-dialog-actions align="center">  <button mat-button mat-dialog-close="quit">Quitter</button>  <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial>Rejouer</button></mat-dialog-actions></div>'
+        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title *ngIf="winner; else drawTitle">    <span *ngIf="winner.id === 0" i18n="red won"> Victoire des Rouges !</span>    <span *ngIf="winner.id === 1" i18n="yellow won"> Victoire des Jaunes !</span></h1><ng-template #drawTitle><h1 mat-dialog-title i18n="nobody won" >Match nul !</h1><h2 mat-dialog-title i18n="the grid is full">La grille est pleine...</h2></ng-template><mat-dialog-content class="mat-typography">    <ng-container mat-dialog-title *ngIf="winner; else drawImage">        <img *ngIf="winner.id === 0" src="/assets/img/trophee-red.svg" class="win__image" />        <img *ngIf="winner.id === 1" src="/assets/img/trophee-yellow.svg" class="win__image" />    </ng-container>    <ng-template #drawImage><img src="/assets/img/draw.svg" class="win__image" /></ng-template></mat-dialog-content><mat-dialog-actions align="center">  <button mat-button mat-dialog-close="quit" i18n="quit">Quitter</button>  <button mat-raised-button color="primary" mat-dialog-close="replay" cdkFocusInitial i18n="play again">Rejouer</button></mat-dialog-actions></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CaseComponent', 'selector': 'app-case'},{'name': 'EndGameComponent', 'selector': 'app-end-game'},{'name': 'GameComponent', 'selector': 'app-game'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EndGameComponent'};

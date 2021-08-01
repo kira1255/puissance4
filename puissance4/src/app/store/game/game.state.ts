@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { removeItem } from '@ngxs/store/operators';
 import { Game } from 'src/app/models/game';
 import { CheckWinner, GameInit, PlayPawn, GameReset, CancelLastMove, SetRows, SetColumns } from './game.actions';
 import { VictoryCheckService } from '../services/victory-check.service';
@@ -139,7 +138,7 @@ export class GameState {
         const truncatedPawns = state.game.pawns.slice(0,-1);
         // check : there is at least one pawn 
         if(state.game.pawns.length === 0){
-            throw new Error('🧐 Aucun pion en jeu !');
+            throw new Error($localize`🧐 Aucun pion en jeu !`);
         }
         patchState({
             ...state, game: {
@@ -159,7 +158,7 @@ export class GameState {
         const pawnsList = [...state.game.pawns, pawn]
         // check : column is full already
         if(pawn.y >= state.game.rows){
-            throw new Error('🧐 La colonne est pleine !');
+            throw new Error($localize`🧐 La colonne est pleine !`);
         }
         patchState({
             ...state, game: {
