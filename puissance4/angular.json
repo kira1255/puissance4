@@ -5,6 +5,9 @@
   "projects": {
     "puissance4": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "fr"
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"

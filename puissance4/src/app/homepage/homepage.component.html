@@ -8,13 +8,13 @@
     <div fxFlex="50" fxFlex.xs="70" class="homepage__menu">
         <div fxLayout="column" fxLayoutAlign="center" fxLayoutAlign.xs="flex-start" fxFlexFill>
             <div class="homepage__settings-item">
-                <h3 class="homepage__settings-title">Colonnes :</h3>
+                <h3 class="homepage__settings-title" i18n="columns">Colonnes :</h3>
                 <mat-slider (change)="setColumns($event)" [ngModel]="(columns | async)" color="primary"
                  thumbLabel tickInterval="1" step="2" min="5" max="9"></mat-slider>
             </div>
 
             <div class="homepage__settings-item">
-                <h3 class="homepage__settings-title">Lignes :</h3>
+                <h3 class="homepage__settings-title" i18n="rows">Lignes :</h3>
                 <mat-slider (change)="setRows($event)" [ngModel]="(rows | async)" color="primary"
                  thumbLabel tickInterval="1" step="2" min="4" max="8"></mat-slider>
             </div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             
-            <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary">Jouer</button>
+            <button class="homepage__play-button" (click)="startGame()" mat-raised-button fxFlexAlign="center" fxFlexJustify="center" color="primary" i18n="play">Jouer</button>
         </div>
     </div>
 
