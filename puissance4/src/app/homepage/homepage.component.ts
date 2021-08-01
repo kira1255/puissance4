@@ -57,4 +57,12 @@ export class HomepageComponent {
     this.store.dispatch(new SetRows(event.value));
   }
 
+  /**
+   * Navigate to an external link
+   * @param {string} link link to navigate to
+   */
+  navigateToExternalURL(link: string){
+    window.location.href = link;
+  }
+
 }

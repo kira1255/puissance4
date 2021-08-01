@@ -20,13 +20,16 @@
             </div>
             <div class="homepage__settings-item">
                 <div fxLayout="row" fxLayoutAlign="space-between" fxFlexFill>
-                    <button mat-icon-button class="homepage__flag-button">
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-6585f.web.app/')">
                         <img class="homepage__flag" src="/assets/img/flag-fr.png" />
                     </button>
-                    <button mat-icon-button class="homepage__flag-button">
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-en.web.app/')">
                         <img class="homepage__flag" src="/assets/img/flag-en.png" />
                     </button>
-                    <button mat-icon-button class="homepage__flag-button">
+                    <button mat-icon-button class="homepage__flag-button" 
+                    (click)="navigateToExternalURL('https://puissance-4-es.web.app/')">
                         <img class="homepage__flag" src="/assets/img/flag-es.png" />
                     </button>
                 </div>

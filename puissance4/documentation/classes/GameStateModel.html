@@ -140,7 +140,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/store/game/game.state.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/store/game/game.state.ts:15</a></div>
                         </td>
                     </tr>
 
@@ -167,7 +167,6 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { State, Action, StateContext, Selector } from &#x27;@ngxs/store&#x27;;
-import { removeItem } from &#x27;@ngxs/store/operators&#x27;;
 import { Game } from &#x27;src/app/models/game&#x27;;
 import { CheckWinner, GameInit, PlayPawn, GameReset, CancelLastMove, SetRows, SetColumns } from &#x27;./game.actions&#x27;;
 import { VictoryCheckService } from &#x27;../services/victory-check.service&#x27;;
@@ -306,7 +305,7 @@ export class GameState {
         const truncatedPawns &#x3D; state.game.pawns.slice(0,-1);
         // check : there is at least one pawn 
         if(state.game.pawns.length &#x3D;&#x3D;&#x3D; 0){
-            throw new Error(&#x27;🧐 Aucun pion en jeu !&#x27;);
+            throw new Error($localize&#x60;🧐 Aucun pion en jeu !&#x60;);
         }
         patchState({
             ...state, game: {
@@ -326,7 +325,7 @@ export class GameState {
         const pawnsList &#x3D; [...state.game.pawns, pawn]
         // check : column is full already
         if(pawn.y &gt;&#x3D; state.game.rows){
-            throw new Error(&#x27;🧐 La colonne est pleine !&#x27;);
+            throw new Error($localize&#x60;🧐 La colonne est pleine !&#x60;);
         }
         patchState({
             ...state, game: {
