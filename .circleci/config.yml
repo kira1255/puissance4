@@ -4,7 +4,7 @@ executors:
     docker:
       - image: circleci/node:12-browsers
 jobs:
-  my-job-name:
+  karma-test:
 
     executor: my-custom-executor
     steps:
@@ -20,4 +20,4 @@ jobs:
 workflows:
   my-custom-workflow:
     jobs:
-      - my-job-name
+      - karma-test
