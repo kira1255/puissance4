@@ -15,7 +15,7 @@ jobs:
           
           npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       - store_test_results:
-          path: /tmp/test-results
+          path: /test-results
 
 workflows:
   my-custom-workflow:
