@@ -23,7 +23,7 @@ ES : https://puissance-4-es.web.app
 
 L'appli est installable, sur android la popup doit s'afficher automatiquement pour installer le jeu, sur IOS il faut aller dans le menu et sélectionner "Ajouter à l'écran d'accueil" depuis safari.
 
-Changer de langue sur la PWA ouvrir un navigateur simplifié car chaque langue a son domaine.
+Changer de langue sur la PWA ouvre un navigateur simplifié car chaque langue a son domaine.
 
 ## NGXS
 
