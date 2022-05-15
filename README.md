@@ -1,5 +1,8 @@
 # Puissance4
 
+## CI/CD
+Des tests automatiques (Karma/Jasmine) sont en place avec circle-ci (voir .circleci à la racine pour la config)
+
 ## Tester l'appli:
 
 L'application est hebergée sur firebase, elle est dispo en ligne ici: https://puissance-4-6585f.web.app
