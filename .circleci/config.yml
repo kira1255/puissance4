@@ -1,16 +1,19 @@
-version: 2
-jobs:
-  build:
-    working_directory: ~/puissance4
+version: 2.1
+executors:
+  my-custom-executor:
     docker:
-      ‐ image: circleci/node:10-browsers
+      - image: circleci/node:10-browsers
+jobs:
+  my-job-name:
+
+    executor: my-custom-executor
     steps:
-      ‐ checkout
-      ‐ restore_cache:
-          key: puissance4-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      ‐ run: npm install
-      ‐ save_cache:
-          key: puissance4-{{ .Branch }}-{{ checksum "package-lock.json" }}
-          paths:
-            ‐ "node_modules"
-      ‐ run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - checkout
+      - run: |
+          # echo testing puissance4!
+          npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+workflows:
+  my-custom-workflow:
+    jobs:
+      - my-job-name
